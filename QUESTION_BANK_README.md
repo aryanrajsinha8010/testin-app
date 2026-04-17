@@ -1,30 +1,31 @@
-# Subject Question Bank
+# Subject Question Bank (Rewritten)
 
-This repository includes a generated question bank file:
+This project now provides a **rewritten** question bank with significantly more varied question patterns.
+
+## Output file
 
 - `subject_question_bank.csv`
 
-## What it contains
+## Coverage and format
 
-- All subjects from your provided list.
-- `200` multiple-choice questions per subject.
-- `4` options per question (`option_a`..`option_d`).
-- `correct_option` field containing the correct choice letter.
-- Progression tags in `difficulty` column:
-  - Questions `1-70`: Easy
-  - Questions `71-140`: Medium
-  - Questions `141-200`: Hard
+- Includes all subjects listed in your prompt.
+- `200` MCQs per subject.
+- Each question has `4` options and one `correct_option` (`A`/`B`/`C`/`D`).
+- Difficulty progression:
+  - Q1–Q70: Easy
+  - Q71–Q140: Medium
+  - Q141–Q200: Hard
 
-## Ordering
+## Syllabus orientation
 
-The `subject_order` column places common/core subjects first (e.g., Mathematics, Physics, Chemistry, Biology, Computer Science, Medicine, Law), then the remaining subjects.
+The generator is designed around Class 11/12 + first-year college style syllabus coverage:
 
-## Regeneration
+- Core subject topic maps for high-demand subjects (Physics, Chemistry, Biology, Mathematics, Computer Science, Law, Medicine, Electrical Engineering, Software Engineering).
+- Category-level topic pools for the remaining subjects.
+- Mixed conceptual, numerical, interpretation, methodology, and application-style questions.
 
-Run:
+## Regenerate
 
 ```bash
 python3 generate_subject_question_bank.py
 ```
-
-This will regenerate `subject_question_bank.csv`.
